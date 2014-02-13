@@ -26,8 +26,15 @@ function addProjectDetails(e) {
 	// get rid of 'project' from the front of the id 'project3'
 	var idNumber = projectID.substr('project'.length);
 
+	$.get("http://localhost:3000/project/" + idNumber, callbk);
 	console.log("User clicked on project " + idNumber);
+	console.log("http://localhost:3000/project/")
+	function callbk(result) {
+
+	}
 }
+
+$("div#details").html("<p>foo</p>");
 
 /*
  * Make an AJAX call to retrieve a color palette for the site
